@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Southern San Andreas Super Autos</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="banner">
+  </header>
+
+  <nav class="nav-bar">
+    <button onclick="showSection('products')">Veículos</button>
+    <button onclick="showSection('contact')">Contato</button>
+  </nav>
+
+  <main>
+    <section id="products" class="product-section">
+      <h2>Novidades Exclusivas</h2>
+      <div id="vehicle-list" class="vehicle-list">
+        <!-- Veículo default -->
+        <div class="vehicle-card">
+          <img src="nsx.jpg" alt="Veículo Exemplo">
+          <h3>Honda NSX 1999</h3>
+          <p>Preço: $90,000</p>
+          <button onclick="editVehicle(this)">Editar</button>
+          <button onclick="removeVehicle(this)">Remover</button>
+        </div>
+      </div>
+
+      <form id="vehicle-form" class="form-group">
+  <input type="text" id="vehicle-name" placeholder="Nome do veículo" required />
+  <input type="number" id="vehicle-price" placeholder="Preço" required />
+  <input type="url" id="vehicle-image" placeholder="URL da imagem" />
+  <button type="submit">Adicionar Veículo</button>
+</form>
+
+    </section>
+
+    <section id="contact" class="contact-section" style="display: none">
+      <h2>Formulário de Contato</h2>
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" required />
+        </div>
+        <div class="form-group">
+          <label for="assunto">Assunto:</label>
+          <select id="assunto" aria-label="Selecione um assunto" required>
+            <option value="">Selecione...</option>
+            <option value="Suporte Técnico">Suporte Técnico</option>
+            <option value="Vendas">Vendas</option>
+            <option value="Feedback">Feedback</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" required></textarea>
+        </div>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Southern San Andreas Super Autos</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
